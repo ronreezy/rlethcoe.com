@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronald Lethcoe - Links</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #0a0e1a;
+            --color-bg-deep: #050810;
+            --color-surface: rgba(15, 25, 45, 0.6);
+            --color-cyan: #00d9ff;
+            --color-cyan-bright: #66e5ff;
+            --color-cyan-glow: rgba(0, 217, 255, 0.4);
+            --color-text: #e0f2ff;
+            --color-text-muted: #7d9cb8;
+            --font-display: 'Orbitron', sans-serif;
+            --font-body: 'Rajdhani', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--color-bg-deep);
+            color: var(--color-text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Circuit board background pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(90deg, rgba(0, 217, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(rgba(0, 217, 255, 0.02) 1px, transparent 1px);
+            background-size: 
+                50px 50px,
+                50px 50px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Subtle glow overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes glow {
+            0%, 100% { 
+                box-shadow: 
+                    0 0 20px var(--color-cyan-glow),
+                    0 0 40px var(--color-cyan-glow),
+                    inset 0 0 20px var(--color-cyan-glow);
+            }
+            50% { 
+                box-shadow: 
+                    0 0 30px var(--color-cyan-glow),
+                    0 0 60px var(--color-cyan-glow),
+                    inset 0 0 30px var(--color-cyan-glow);
+            }
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .logo-container {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 2rem;
+            position: relative;
+            animation: fadeInScale 0.8s ease-out;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 20px var(--color-cyan-glow));
+            animation: logoGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes logoGlow {
+            0%, 100% { 
+                filter: drop-shadow(0 0 20px var(--color-cyan-glow));
+            }
+            50% { 
+                filter: drop-shadow(0 0 35px var(--color-cyan-glow)) drop-shadow(0 0 50px rgba(0, 217, 255, 0.2));
+            }
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+            color: var(--color-cyan-bright);
+            text-transform: uppercase;
+            text-shadow: 
+                0 0 10px var(--color-cyan-glow),
+                0 0 20px var(--color-cyan-glow),
+                0 0 30px var(--color-cyan-glow);
+            animation: textGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes textGlow {
+            0%, 100% { 
+                text-shadow: 
+                    0 0 10px var(--color-cyan-glow),
+                    0 0 20px var(--color-cyan-glow),
+                    0 0 30px var(--color-cyan-glow);
+            }
+            50% { 
+                text-shadow: 
+                    0 0 15px var(--color-cyan-glow),
+                    0 0 30px var(--color-cyan-glow),
+                    0 0 45px var(--color-cyan-glow);
+            }
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--color-text);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            line-height: 1.6;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .link-item {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .link-item:nth-child(1) { animation-delay: 0.1s; }
+        .link-item:nth-child(2) { animation-delay: 0.2s; }
+        .link-item:nth-child(3) { animation-delay: 0.3s; }
+        .link-item:nth-child(4) { animation-delay: 0.4s; }
+        .link-item:nth-child(5) { animation-delay: 0.5s; }
+
+        .link-item a {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            padding: 1.25rem 2rem;
+            background: var(--color-surface);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--color-cyan);
+            border-radius: 50px;
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 600;
+            font-size: 1.125rem;
+            letter-spacing: 0.03em;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 
+                0 0 15px rgba(0, 217, 255, 0.2),
+                inset 0 0 15px rgba(0, 217, 255, 0.05);
+        }
+
+        .link-item a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .link-item a:hover::before {
+            left: 100%;
+        }
+
+        .link-item a:hover {
+            transform: translateX(8px);
+            border-color: var(--color-cyan-bright);
+            background: rgba(15, 25, 45, 0.8);
+            box-shadow: 
+                0 0 25px var(--color-cyan-glow),
+                0 0 40px rgba(0, 217, 255, 0.3),
+                inset 0 0 20px rgba(0, 217, 255, 0.1);
+        }
+
+        .link-item a:active {
+            transform: translateX(4px);
+        }
+
+        .link-icon {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+            fill: none;
+            stroke: var(--color-cyan);
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            filter: drop-shadow(0 0 5px var(--color-cyan-glow));
+            transition: all 0.3s ease;
+        }
+
+        .link-item a:hover .link-icon {
+            stroke: var(--color-cyan-bright);
+            filter: drop-shadow(0 0 10px var(--color-cyan-glow));
+            transform: scale(1.1);
+        }
+
+        .link-text {
+            flex: 1;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 217, 255, 0.2);
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.8s forwards;
+        }
+
+        .footer p {
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+            letter-spacing: 0.05em;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .link-item a {
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+                gap: 1rem;
+            }
+
+            .logo-container {
+                width: 140px;
+                height: 140px;
+            }
+
+            .link-icon {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="RL.png" alt="RL Logo">
+            </div>
+            <h1>Ronald Lethcoe</h1>
+            <p class="tagline">Faculty Development, AI Integration, Inclusive Course Design</p>
+        </div>
+
+        <div class="links">
+            <div class="link-item">
+                <a href="https://www.linkedin.com/in/rlethcoe/" target="_blank" rel="noopener noreferrer">
+                    <svg class="link-icon" viewBox="0 0 24 24">
+                        <rect x="2" y="2" width="20" height="20" rx="2"/>
+                        <path d="M8 11v5M8 8v.01"/>
+                        <path d="M12 16v-5"/>
+                        <path d="M16 16v-3a2 2 0 00-4 0"/>
+                    </svg>
+                    <span class="link-text">LinkedIn Profile</span>
+                </a>
+            </div>
+
+            <div class="link-item">
+                <a href="https://sites.google.com/view/rlethcoe/ronald-lethcoes-portfolio" target="_blank" rel="noopener noreferrer">
+                    <svg class="link-icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="8" r="4"/>
+                        <path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"/>
+                    </svg>
+                    <span class="link-text">Portfolio</span>
+                </a>
+            </div>
+
+            <div class="link-item">
+                <a href="https://www.youtube.com/@ronaldlethcoe" target="_blank" rel="noopener noreferrer">
+                    <svg class="link-icon" viewBox="0 0 24 24">
+                        <path d="M23 9.71a8.5 8.5 0 00-.91-4.13 2.92 2.92 0 00-1.72-1A78.36 78.36 0 0012 4.27a78.45 78.45 0 00-8.34.3 2.87 2.87 0 00-1.46.74c-.9.83-1 2.25-1.1 3.45a48.29 48.29 0 000 6.48 9.55 9.55 0 00.3 2 3.14 3.14 0 00.71 1.36 2.86 2.86 0 001.49.78 45.18 45.18 0 006.5.33c3.5.05 6.57 0 10.2-.28a2.88 2.88 0 001.53-.78 2.49 2.49 0 00.61-1 10.58 10.58 0 00.52-3.4c.04-.56.04-3.94.04-4.54zM9.74 14.85V8.66l5.92 3.11c-1.66.92-3.85 1.96-5.92 3.08z"/>
+                    </svg>
+                    <span class="link-text">YouTube Channel</span>
+                </a>
+            </div>
+
+            <div class="link-item">
+                <a href="https://open.spotify.com/show/202FbaDxmPvbnjD8lxq6TK?si=4HZtptYXQjGR0sTMyDJPrg" target="_blank" rel="noopener noreferrer">
+                    <svg class="link-icon" viewBox="0 0 24 24">
+                        <path d="M2 12c0-1.5 1-3 2.5-3.5S7 9 8.5 10.5 11 13 12 13s2.5-1.5 4-3 3-1.5 4.5-1 2.5 2 2.5 3.5"/>
+                        <path d="M2 16c0-1.5 1-3 2.5-3.5S7 13 8.5 14.5 11 17 12 17s2.5-1.5 4-3 3-1.5 4.5-1 2.5 2 2.5 3.5"/>
+                        <path d="M2 8c0-1.5 1-3 2.5-3.5S7 5 8.5 6.5 11 9 12 9s2.5-1.5 4-3 3-1.5 4.5-1S23 7 23 8.5"/>
+                    </svg>
+                    <span class="link-text">The Deep Dive: AI in Education</span>
+                </a>
+            </div>
+
+            <div class="link-item">
+                <a href="https://cptc.libguides.com/TLC/podcast" target="_blank" rel="noopener noreferrer">
+                    <svg class="link-icon" viewBox="0 0 24 24">
+                        <rect x="7" y="8" width="10" height="10" rx="1"/>
+                        <circle cx="10" cy="12" r="1"/>
+                        <circle cx="14" cy="12" r="1"/>
+                        <path d="M9 15h6"/>
+                        <path d="M7 11h-2m14 0h2M12 6V4m-2 4v-2m4 2v-2"/>
+                        <path d="M7 18v3m10-3v3"/>
+                    </svg>
+                    <span class="link-text">Simon Says: Educate!</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 RONALD LETHCOE</p>
+        </div>
+    </div>
+</body>
+</html>
