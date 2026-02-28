@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ronald Lethcoe, M.Ed.</title>
-    <link rel="icon" type="image/png" href="Ronald.png">
+    <title>Ronald Lethcoe - Instructional Design & AI Integration</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             /* Color System - Sophisticated Educational Palette */
@@ -22,10 +21,10 @@
             --color-text-secondary: #5a5751;
             --color-text-muted: #8a857c;
             
-            /* Accent Colors - Warm, Approachable, Professional */
-            --color-accent-primary: #d4682c;
-            --color-accent-secondary: #2a5f4f;
-            --color-accent-tertiary: #8b6f47;
+            /* Accent Colors - Professional Blue */
+            --color-accent-primary: #002FA7;
+            --color-accent-secondary: #0047D1;
+            --color-accent-tertiary: #0039B8;
             
             /* Shadows & Effects */
             --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
@@ -34,7 +33,7 @@
             --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.08), 0 10px 10px rgba(0, 0, 0, 0.04);
             
             /* Typography */
-            --font-display: 'Spectral', serif;
+            --font-display: 'Roboto', sans-serif;
             --font-body: 'DM Sans', sans-serif;
             
             /* Spacing Scale */
@@ -68,6 +67,7 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            transition: background-color 0.3s ease;
         }
 
         /* Subtle background pattern */
@@ -82,20 +82,6 @@
                 radial-gradient(circle at 2px 2px, var(--color-border) 1px, transparent 1px);
             background-size: 40px 40px;
             opacity: 0.3;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        /* Subtle glow overlay */
-        body::after {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.03) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
@@ -140,12 +126,13 @@
 
         .header h1 {
             font-family: var(--font-display);
-            font-size: 2.75rem;
-            font-weight: 700;
+            font-size: 3.5rem;
+            font-weight: 900;
             color: var(--color-text-primary);
             margin-bottom: var(--space-xs);
-            letter-spacing: -0.02em;
+            letter-spacing: 0.02em;
             line-height: 1.1;
+            text-transform: uppercase;
         }
 
         .header .title-accent {
@@ -224,7 +211,7 @@
             background: linear-gradient(
                 135deg,
                 transparent 0%,
-                rgba(212, 104, 44, 0.03) 50%,
+                rgba(0, 47, 167, 0.03) 50%,
                 transparent 100%
             );
             opacity: 0;
@@ -369,7 +356,7 @@
             outline: none;
             border-color: var(--color-accent-primary);
             background: var(--color-surface);
-            box-shadow: 0 0 0 3px rgba(212, 104, 44, 0.1);
+            box-shadow: 0 0 0 3px rgba(0, 47, 167, 0.1);
         }
 
         .form-group textarea {
@@ -466,11 +453,15 @@
             }
 
             .header h1 {
-                font-size: 2rem;
+                font-size: 2.25rem;
+            }
+
+            .header .title-accent {
+                font-size: 0.75rem;
             }
 
             .header .tagline {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
 
             .link-card a {
@@ -513,7 +504,7 @@
             <div class="profile-image-container">
                 <img src="Ronald.png" alt="Ronald Lethcoe">
             </div>
-            <span class="title-accent">Instructional Design Specialist</span>
+            <span class="title-accent">Curriculum & Instructional Design Specialist</span>
             <h1>Ronald Lethcoe</h1>
             <p class="tagline">AI Integration in Education • Faculty Development • Inclusive Course Design</p>
         </header>
@@ -650,5 +641,19 @@
             <p>&copy; 2026 Ronald Lethcoe • Instructional Design & AI Integration</p>
         </footer>
     </div>
+
+    <script>
+        // Subtle background color shift based on mouse movement
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            // Very subtle color variations
+            const hue = 35 + (x * 10); // Subtle shift in hue
+            const lightness = 98 + (y * 0.5); // Very subtle lightness change
+            
+            document.body.style.backgroundColor = `hsl(${hue}, 8%, ${lightness}%)`;
+        });
+    </script>
 </body>
 </html>
