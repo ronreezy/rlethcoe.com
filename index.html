@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ronald Lethcoe - Instructional Design & AI Integration</title>
+    <title>Ronald Lethcoe, M.Ed.</title>
+    <link rel="icon" type="image/png" href="Ronald.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -81,6 +82,20 @@
                 radial-gradient(circle at 2px 2px, var(--color-border) 1px, transparent 1px);
             background-size: 40px 40px;
             opacity: 0.3;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Subtle glow overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.03) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
@@ -496,7 +511,7 @@
         <!-- Header -->
         <header class="header">
             <div class="profile-image-container">
-                <img src="RonaldLethcoe.png" alt="Ronald Lethcoe">
+                <img src="Ronald.png" alt="Ronald Lethcoe">
             </div>
             <span class="title-accent">Instructional Design Specialist</span>
             <h1>Ronald Lethcoe</h1>
@@ -530,7 +545,7 @@
 
             <!-- The Deep Dive Main -->
             <div class="link-card">
-                <a href="https://sites.google.com/view/thedeepdiveaiineducation/home" target="_blank" rel="noopener noreferrer">
+                <a href="https://sites.google.com/view/the-deep-dive-podcast" target="_blank" rel="noopener noreferrer">
                     <div class="link-icon-wrapper">
                         <svg class="link-icon" viewBox="0 0 24 24">
                             <circle cx="12" cy="12" r="10"/>
