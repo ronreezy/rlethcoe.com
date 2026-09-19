@@ -111,7 +111,7 @@
     .kahoot-link { color: #f5c342; text-decoration: none; }
     .kahoot-link:hover { color: white; }
     .kahoot-unavailable { color: var(--text-muted); }
-    .study-card-link { display: inline-block; margin-top: 10px; }
+    .study-card-link { display: inline-block; margin-top: 0; }
     .lesson-modal { position: fixed; top: 50%; left: 50%; width: min(1120px, calc(100% - 28px)); max-height: min(880px, calc(100vh - 28px)); margin: 0; padding: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.14); border-radius: 16px; background: #0b1020; color: var(--text); box-shadow: 0 24px 80px rgba(0,0,0,.7); transform: translate(-50%, -50%); }
     .lesson-modal::backdrop { background: rgba(3, 6, 14, .86); backdrop-filter: blur(5px); }
     .modal-shell { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(280px, .9fr); min-height: 550px; }
@@ -185,7 +185,7 @@
             <time class="card-date" datetime="2026-09-19">September 19</time><span class="thumb-word">Shark<br>Photos</span><span class="thumb-icon" aria-hidden="true"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18"></path><path d="m14 5 7 7-7 7"></path></svg></span>
           </a>
           <div class="card-body"><h2>Influencers risk shark bites for perfect photo</h2><p>Influencers, sharks, risk, and the choices people make for a photo.</p></div>
-          <footer class="card-footer"><div class="footer-actions"><a class="lesson-link" href="https://breakingnewsenglish.com/2608/260820-influencers-and-sharks.html" target="_blank" rel="noopener noreferrer">Open lesson</a><span class="kahoot-unavailable">Kahoot coming soon</span></div><svg class="external" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 3h7v7"></path><path d="M10 14 21 3"></path><path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6"></path></svg></footer>
+          <footer class="card-footer"><div class="footer-actions"><a class="lesson-link" href="https://breakingnewsenglish.com/2608/260820-influencers-and-sharks.html" target="_blank" rel="noopener noreferrer">Open lesson</a><a class="kahoot-link" href="https://create.kahoot.it/share/influencers-risk-shark-bites-for-perfect-photo/fe4684be-f0fc-48af-8463-c3bb83baabb2" target="_blank" rel="noopener noreferrer">Study with Kahoot</a></div><svg class="external" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 3h7v7"></path><path d="M10 14 21 3"></path><path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6"></path></svg></footer>
         </article>
 
         <article class="card">
@@ -267,7 +267,7 @@
         title: "Influencers risk shark bites for perfect photo",
         summary: "A news lesson about social media, sharks, and the risks people take for a photograph.",
         source: "https://breakingnewsenglish.com/2608/260820-influencers-and-sharks.html",
-        kahoot: null,
+        kahoot: "https://create.kahoot.it/share/influencers-risk-shark-bites-for-perfect-photo/fe4684be-f0fc-48af-8463-c3bb83baabb2",
         slides: Array.from({ length: 10 }, (_, index) => `assets/esl2/influencers-slide-${String(index + 1).padStart(2, "0")}.jpg`),
         sentences: []
       },
