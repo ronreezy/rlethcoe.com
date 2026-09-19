@@ -95,51 +95,51 @@
     .cover-protein { background-image: url("assets/esl2/protein-slide-01.jpg"); }
     .cover-earth { background-image: url("assets/esl2/earth-slide-01.jpg"); }
     .cover-ferrari { background-image: url("assets/esl2/ferrari-slide-01.jpg"); }
-    .card-date { position: relative; z-index: 1; align-self: start; padding: 3px 7px; border: 1px solid rgba(255,255,255,.2); border-radius: 5px; background: rgba(8,12,24,.5); font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .card-date { position: relative; z-index: 1; align-self: start; padding: 4px 8px; border: 1px solid rgba(255,255,255,.2); border-radius: 5px; background: rgba(8,12,24,.5); font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
     .thumb-word { position: relative; z-index: 1; align-self: center; max-width: 90%; font-family: "Bebas Neue", sans-serif; font-size: clamp(2.25rem, 4vw, 3.45rem); letter-spacing: .045em; line-height: .88; text-align: center; text-shadow: 0 2px 7px rgba(0,0,0,.3); }
     .thumb-icon { position: relative; z-index: 1; align-self: end; justify-self: end; color: rgba(255,255,255,.92); }
     .thumb-icon svg { width: 25px; height: 25px; }
-    .card-body { flex: 1; padding: 14px 15px 16px; }
-    .card-body h2 { font-size: 1rem; font-weight: 600; line-height: 1.35; }
-    .card-body p { margin-top: 7px; color: var(--text-muted); font-size: .81rem; line-height: 1.45; }
+    .card-body { flex: 1; padding: 16px 17px 18px; }
+    .card-body h2 { font-size: 1.16rem; font-weight: 600; line-height: 1.35; }
+    .card-body p { margin-top: 8px; color: var(--text-sub); font-size: .98rem; line-height: 1.55; }
     .card-footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 11px 15px 13px; border-top: 1px solid var(--border); }
     .footer-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; }
-    .lesson-link { color: var(--source); font-size: .8rem; font-weight: 600; letter-spacing: .02em; line-height: 1.2; text-decoration: none; }
+    .lesson-link { color: var(--source); font-size: .94rem; font-weight: 600; letter-spacing: .02em; line-height: 1.3; text-decoration: none; }
     .lesson-link:hover { color: white; }
     .external { width: 17px; height: 17px; color: var(--source); }
-    .kahoot-link, .kahoot-unavailable { display: inline-flex; align-items: center; font-size: .8rem; font-weight: 600; letter-spacing: .01em; line-height: 1.2; }
+    .kahoot-link, .kahoot-unavailable { display: inline-flex; align-items: center; font-size: .94rem; font-weight: 600; letter-spacing: .01em; line-height: 1.3; }
     .kahoot-link { color: #f5c342; text-decoration: none; }
     .kahoot-link:hover { color: white; }
     .kahoot-unavailable { color: var(--text-muted); }
     .study-card-link { display: inline-block; margin-top: 10px; }
-    .lesson-modal { width: min(1120px, calc(100% - 28px)); max-height: min(880px, calc(100vh - 28px)); padding: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.14); border-radius: 16px; background: #0b1020; color: var(--text); box-shadow: 0 24px 80px rgba(0,0,0,.7); }
+    .lesson-modal { position: fixed; top: 50%; left: 50%; width: min(1120px, calc(100% - 28px)); max-height: min(880px, calc(100vh - 28px)); margin: 0; padding: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.14); border-radius: 16px; background: #0b1020; color: var(--text); box-shadow: 0 24px 80px rgba(0,0,0,.7); transform: translate(-50%, -50%); }
     .lesson-modal::backdrop { background: rgba(3, 6, 14, .86); backdrop-filter: blur(5px); }
     .modal-shell { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(280px, .9fr); min-height: 550px; }
     .carousel-panel { display: flex; flex-direction: column; justify-content: center; min-height: 0; padding: 20px; background: #050812; }
     .carousel-frame { position: relative; display: grid; place-items: center; width: 100%; min-height: 0; }
     .carousel-image { display: block; width: 100%; max-height: min(630px, calc(100vh - 144px)); object-fit: contain; border-radius: 8px; box-shadow: 0 12px 35px rgba(0,0,0,.55); }
-    .carousel-control { position: absolute; top: 50%; display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; background: rgba(8,12,24,.82); color: white; cursor: pointer; transform: translateY(-50%); transition: background .15s, transform .15s; }
+    .carousel-control { position: absolute; top: 50%; display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; background: rgba(8,12,24,.82); color: white; cursor: pointer; transform: translateY(-50%); transition: background .15s, transform .15s; }
     .carousel-control:hover { background: var(--accent); transform: translateY(-50%) scale(1.06); }
     .carousel-control:focus-visible, .modal-close:focus-visible, .modal-button:focus-visible { outline: 3px solid white; outline-offset: 3px; }
     .carousel-prev { left: 10px; }.carousel-next { right: 10px; }
     .carousel-control svg { width: 20px; height: 20px; }
-    .carousel-status { margin-top: 13px; color: var(--text-muted); font-size: .8rem; font-weight: 600; letter-spacing: .09em; text-align: center; text-transform: uppercase; }
+    .carousel-status { margin-top: 13px; color: var(--text-sub); font-size: .9rem; font-weight: 600; letter-spacing: .08em; text-align: center; text-transform: uppercase; }
     .carousel-dots { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 9px; }
     .carousel-dot { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 50%; background: #46516b; cursor: pointer; }
     .carousel-dot[aria-current="true"] { background: var(--accent); box-shadow: 0 0 0 3px rgba(91,196,245,.16); }
     .modal-details { position: relative; display: flex; flex-direction: column; padding: 29px 25px 25px; overflow-y: auto; background: var(--bg-card); }
     .modal-close { position: absolute; top: 15px; right: 15px; display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--border); border-radius: 50%; background: transparent; color: var(--text-sub); cursor: pointer; }
     .modal-close:hover { border-color: var(--accent); color: white; }
-    .modal-kicker { color: var(--accent); font-size: .74rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
-    .modal-title { margin-top: 8px; padding-right: 28px; font-size: 1.45rem; line-height: 1.2; }
-    .modal-summary { margin-top: 12px; color: var(--text-sub); font-size: .94rem; line-height: 1.65; }
+    .modal-kicker { color: var(--accent); font-size: .84rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .modal-title { margin-top: 8px; padding-right: 28px; font-size: 1.72rem; line-height: 1.2; }
+    .modal-summary { margin-top: 12px; color: var(--text-sub); font-size: 1.06rem; line-height: 1.65; }
     .student-sentences { margin-top: 25px; padding-top: 22px; border-top: 1px solid var(--border); }
-    .student-sentences h3 { font-size: .82rem; letter-spacing: .09em; text-transform: uppercase; }
-    .sentences-note { margin-top: 8px; color: var(--text-muted); font-size: .88rem; line-height: 1.55; }
+    .student-sentences h3 { font-size: .94rem; letter-spacing: .08em; text-transform: uppercase; }
+    .sentences-note { margin-top: 8px; color: var(--text-sub); font-size: .98rem; line-height: 1.6; }
     .sentence-list { display: grid; gap: 9px; margin-top: 12px; list-style: none; }
-    .sentence-list li { padding: 10px 12px; border-left: 3px solid var(--accent); background: rgba(255,255,255,.04); color: var(--text-sub); font-size: .9rem; }
+    .sentence-list li { padding: 11px 13px; border-left: 3px solid var(--accent); background: rgba(255,255,255,.04); color: var(--text-sub); font-size: 1rem; line-height: 1.55; }
     .modal-actions { display: grid; gap: 9px; margin-top: auto; padding-top: 24px; }
-    .modal-button { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: .88rem; font-weight: 700; text-decoration: none; transition: border-color .15s, background .15s; }
+    .modal-button { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: .98rem; font-weight: 700; text-decoration: none; transition: border-color .15s, background .15s; }
     .modal-button:hover { border-color: var(--accent); background: rgba(91,196,245,.1); }
     .modal-button.kahoot { border-color: rgba(245,195,66,.45); color: #f5c342; }.modal-button.kahoot:hover { border-color: #f5c342; background: rgba(245,195,66,.08); }
     .modal-button[hidden] { display: none; }
