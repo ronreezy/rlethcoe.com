@@ -89,6 +89,7 @@
     .thumb.cover::before { inset: 0; width: auto; height: auto; border: 0; border-radius: 0; background: linear-gradient(180deg, rgba(8,12,24,.08), rgba(8,12,24,.4)); }
     .thumb.cover::after { display: none; }
     .thumb.cover .thumb-word, .thumb.cover .thumb-icon { display: none; }
+    .cover-manga { background-image: url("assets/esl2/manga-slide-01.jpg"); }
     .cover-influencers { background-image: url("assets/esl2/influencers-slide-01.jpg"); }
     .cover-bali { background-image: url("assets/esl2/bali-slide-01.jpg"); }
     .cover-sun { background-image: url("assets/esl2/sun-slide-01.jpg"); }
@@ -181,6 +182,14 @@
     <section class="grid-wrap" aria-label="ESL 2 class lessons">
       <div class="grid">
         <article class="card">
+          <a class="thumb cover cover-manga" href="https://breakingnewsenglish.com/2609/260903-manga-theme-park.html" target="_blank" rel="noopener noreferrer" data-lesson-id="manga" aria-label="Open the France and Saudi Arabia agree to manga theme park lesson details">
+            <time class="card-date" datetime="2026-09-26">September 26</time><span class="thumb-word">Manga<br>Theme Park</span><span class="thumb-icon" aria-hidden="true"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18"></path><path d="m14 5 7 7-7 7"></path></svg></span>
+          </a>
+          <div class="card-body"><h2>France and Saudi Arabia agree to manga theme park</h2><p>Manga, theme parks, and a shared interest connecting France and Saudi Arabia.</p></div>
+          <footer class="card-footer"><div class="footer-actions"><a class="lesson-link" href="https://breakingnewsenglish.com/2609/260903-manga-theme-park.html" target="_blank" rel="noopener noreferrer">Open article</a><a class="kahoot-link" href="https://create.kahoot.it/share/france-and-saudi-arabia-agree-to-manga-theme-park/64c01b48-33bf-4957-b8dc-d7240484b11f" target="_blank" rel="noopener noreferrer">Study with Kahoot</a></div><svg class="external" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 3h7v7"></path><path d="M10 14 21 3"></path><path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6"></path></svg></footer>
+        </article>
+
+        <article class="card">
           <a class="thumb shark cover cover-influencers" href="https://breakingnewsenglish.com/2608/260820-influencers-and-sharks.html" target="_blank" rel="noopener noreferrer" data-lesson-id="influencers" aria-label="Open the Influencers risk shark bites lesson details">
             <time class="card-date" datetime="2026-09-19">September 19</time><span class="thumb-word">Shark<br>Photos</span><span class="thumb-icon" aria-hidden="true"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18"></path><path d="m14 5 7 7-7 7"></path></svg></span>
           </a>
@@ -262,6 +271,15 @@
 
   <script>
     const lessons = {
+      manga: {
+        date: "September 26, 2026",
+        title: "France and Saudi Arabia agree to manga theme park",
+        summary: "A news lesson about manga, a planned theme park near Paris, and the ties between France and Saudi Arabia.",
+        source: "https://breakingnewsenglish.com/2609/260903-manga-theme-park.html",
+        kahoot: "https://create.kahoot.it/share/france-and-saudi-arabia-agree-to-manga-theme-park/64c01b48-33bf-4957-b8dc-d7240484b11f",
+        slides: Array.from({ length: 10 }, (_, index) => `assets/esl2/manga-slide-${String(index + 1).padStart(2, "0")}.jpg`),
+        sentences: []
+      },
       influencers: {
         date: "September 19, 2026",
         title: "Influencers risk shark bites for perfect photo",
