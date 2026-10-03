@@ -317,7 +317,16 @@
         source: "https://breakingnewsenglish.com/2608/260820-influencers-and-sharks.html",
         kahoot: "https://create.kahoot.it/share/influencers-risk-shark-bites-for-perfect-photo/fe4684be-f0fc-48af-8463-c3bb83baabb2",
         slides: Array.from({ length: 10 }, (_, index) => `assets/esl2/influencers-slide-${String(index + 1).padStart(2, "0")}.jpg`),
-        sentences: []
+        sentences: [
+          "If you swim too far into the ocean, you risk finding a shark and you would be risking your life.",
+          "I came here to learn English. Naturally, I can speak better than before.",
+          "Something went wrong and the shark came close to the boat.",
+          "I warned my daughter you get injured if you keep jumping on the couch, but she didn’t listen to my warning.",
+          "There will be many deadly incidents if the sea levels continue to rise.",
+          "This toy is safe for toddlers.",
+          "In particular, the experts are the ones that need to save us from AI."
+        ],
+        vocabulary: ["risk", "risking", "naturally", "went wrong", "warned", "injured", "warning", "incidents", "rise", "safe", "in particular", "experts"]
       },
       bali: {
         date: "September 5, 2026",
@@ -326,6 +335,7 @@
         source: "https://breakingnewsenglish.com/2608/260827-bali-day-of-silence.html",
         kahoot: "https://create.kahoot.it/share/bne-bali-jails-tourist-for-not-respecting-day-of-silence/433885c8-bbf0-467b-8882-1120985f591c",
         slides: Array.from({ length: 15 }, (_, index) => `assets/esl2/bali-slide-${String(index + 1).padStart(2, "0")}.jpg`),
+        showSentences: false,
         sentences: []
       },
       sun: {
@@ -335,6 +345,7 @@
         source: "https://breakingnewsenglish.com/2608/260813-photos-of-the-sun.html",
         kahoot: "https://create.kahoot.it/share/scientists-take-sharpest-ever-photos-of-the-sun/fe64d19d-bef5-480e-9e10-fad881af3515",
         slides: Array.from({ length: 11 }, (_, index) => `assets/esl2/sun-slide-${String(index + 1).padStart(2, "0")}.jpg`),
+        showSentences: false,
         sentences: []
       },
       protein: {
@@ -344,6 +355,7 @@
         source: "https://breakingnewsenglish.com/2608/260806-protein.html",
         kahoot: "https://create.kahoot.it/share/eating-less-protein-could-help-you-live-longer/b625d77e-0706-4e5d-847d-762a8a09922b",
         slides: Array.from({ length: 11 }, (_, index) => `assets/esl2/protein-slide-${String(index + 1).padStart(2, "0")}.jpg`),
+        showSentences: false,
         sentences: []
       },
       earth: {
@@ -353,6 +365,7 @@
         source: "https://breakingnewsenglish.com/2606/260604-earth-prize.html",
         kahoot: "https://create.kahoot.it/share/earth-prize/e1489f10-bc5d-4e1b-80b6-59f9116b9bc7",
         slides: Array.from({ length: 11 }, (_, index) => `assets/esl2/earth-slide-${String(index + 1).padStart(2, "0")}.jpg`),
+        showSentences: false,
         sentences: []
       },
       ferrari: {
@@ -362,6 +375,7 @@
         source: "https://breakingnewsenglish.com/2605/260528-ferrari-luce-electric-car.html",
         kahoot: "https://create.kahoot.it/share/ferrari-luce/fc83dfd4-8660-41f4-8a46-787c6e10969c",
         slides: Array.from({ length: 14 }, (_, index) => `assets/esl2/ferrari-slide-${String(index + 1).padStart(2, "0")}.jpg`),
+        showSentences: false,
         sentences: []
       }
     };
@@ -373,6 +387,7 @@
     const modalDate = document.getElementById("modal-date");
     const modalTitle = document.getElementById("modal-title");
     const modalSummary = document.getElementById("modal-summary");
+    const sentenceSection = document.querySelector(".student-sentences");
     const sentencesNote = document.getElementById("sentences-note");
     const sentenceList = document.getElementById("sentence-list");
     const sourceButton = document.getElementById("source-button");
@@ -449,6 +464,7 @@
       sourceButton.href = activeLesson.source;
       kahootButton.href = activeLesson.kahoot || "";
       kahootButton.hidden = !activeLesson.kahoot;
+      sentenceSection.hidden = activeLesson.showSentences === false;
       sentenceList.replaceChildren();
       sentencesNote.hidden = activeLesson.sentences.length > 0;
       activeLesson.sentences.forEach(sentence => {
