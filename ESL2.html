@@ -89,6 +89,7 @@
     .thumb.cover::before { inset: 0; width: auto; height: auto; border: 0; border-radius: 0; background: linear-gradient(180deg, rgba(8,12,24,.08), rgba(8,12,24,.4)); }
     .thumb.cover::after { display: none; }
     .thumb.cover .thumb-word, .thumb.cover .thumb-icon { display: none; }
+    .cover-toys { background-image: url("assets/esl2/toys-slide-01.jpg"); }
     .cover-manga { background-image: url("assets/esl2/manga-slide-01.jpg"); }
     .cover-influencers { background-image: url("assets/esl2/influencers-slide-01.jpg"); }
     .cover-bali { background-image: url("assets/esl2/bali-slide-01.jpg"); }
@@ -115,7 +116,7 @@
     .study-card-link { display: inline-block; margin-top: 0; }
     .lesson-modal { position: fixed; top: 50%; left: 50%; width: min(1120px, calc(100% - 28px)); max-height: min(880px, calc(100vh - 28px)); margin: 0; padding: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.14); border-radius: 16px; background: #0b1020; color: var(--text); box-shadow: 0 24px 80px rgba(0,0,0,.7); transform: translate(-50%, -50%); }
     .lesson-modal::backdrop { background: rgba(3, 6, 14, .86); backdrop-filter: blur(5px); }
-    .modal-shell { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(280px, .9fr); min-height: 550px; }
+    .modal-shell { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(280px, .9fr); grid-template-rows: minmax(0, 1fr); min-height: min(550px, calc(100vh - 28px)); max-height: min(880px, calc(100vh - 28px)); }
     .carousel-panel { display: flex; flex-direction: column; justify-content: center; min-height: 0; padding: 20px; background: #050812; }
     .carousel-frame { position: relative; display: grid; place-items: center; width: 100%; min-height: 0; }
     .carousel-image { display: block; width: 100%; max-height: min(630px, calc(100vh - 144px)); object-fit: contain; border-radius: 8px; box-shadow: 0 12px 35px rgba(0,0,0,.55); }
@@ -128,7 +129,7 @@
     .carousel-dots { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 9px; }
     .carousel-dot { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 50%; background: #46516b; cursor: pointer; }
     .carousel-dot[aria-current="true"] { background: var(--accent); box-shadow: 0 0 0 3px rgba(91,196,245,.16); }
-    .modal-details { position: relative; display: flex; flex-direction: column; padding: 29px 25px 25px; overflow-y: auto; background: var(--bg-card); }
+    .modal-details { position: relative; display: flex; flex-direction: column; padding: 29px 25px 25px; min-height: 0; overflow-y: auto; background: var(--bg-card); }
     .modal-close { position: absolute; top: 15px; right: 15px; display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--border); border-radius: 50%; background: transparent; color: var(--text-sub); cursor: pointer; }
     .modal-close:hover { border-color: var(--accent); color: white; }
     .modal-kicker { color: var(--accent); font-size: .84rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
@@ -139,6 +140,7 @@
     .sentences-note { margin-top: 8px; color: var(--text-sub); font-size: .98rem; line-height: 1.6; }
     .sentence-list { display: grid; gap: 9px; margin-top: 12px; list-style: none; }
     .sentence-list li { padding: 11px 13px; border-left: 3px solid var(--accent); background: rgba(255,255,255,.04); color: var(--text-sub); font-size: 1rem; line-height: 1.55; }
+    .sentence-list mark { padding: .08em .3em; border: 1px solid #83cdf2; border-radius: .45em; background: #bde7ff; color: #102c43; font-weight: 600; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
     .modal-actions { display: grid; gap: 9px; margin-top: auto; padding-top: 24px; }
     .modal-button { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: .98rem; font-weight: 700; text-decoration: none; transition: border-color .15s, background .15s; }
     .modal-button:hover { border-color: var(--accent); background: rgba(91,196,245,.1); }
@@ -146,7 +148,7 @@
     .modal-button[hidden] { display: none; }
     .slides-pending { display: grid; place-items: center; min-height: 300px; padding: 30px; border: 1px dashed rgba(255,255,255,.18); border-radius: 9px; color: var(--text-muted); text-align: center; }
     .slides-pending svg { width: 36px; height: 36px; margin-bottom: 12px; color: var(--accent); }
-    @media (max-width: 760px) { .modal-shell { grid-template-columns: 1fr; overflow-y: auto; } .carousel-panel { min-height: 0; padding: 14px; } .carousel-image { max-height: 58vh; } .modal-details { min-height: 330px; overflow: visible; } .lesson-modal { max-height: calc(100vh - 18px); } }
+    @media (max-width: 760px) { .modal-shell { grid-template-columns: 1fr; grid-template-rows: auto auto; max-height: calc(100vh - 18px); overflow-y: auto; } .carousel-panel { min-height: 0; padding: 14px; } .carousel-image { max-height: 58vh; } .modal-details { min-height: 330px; overflow: visible; } .lesson-modal { max-height: calc(100vh - 18px); } }
     .site-footer { margin-top: 40px; padding: 0 24px; color: var(--text-muted); font-size: .79rem; text-align: center; }
     .site-footer a { color: var(--accent); text-decoration: none; }
     .site-footer a:hover { text-decoration: underline; }
@@ -181,6 +183,14 @@
 
     <section class="grid-wrap" aria-label="ESL 2 class lessons">
       <div class="grid">
+        <article class="card">
+          <a class="thumb cover cover-toys" href="https://breakingnewsenglish.com/2609/260924-toys-r-us.html" target="_blank" rel="noopener noreferrer" data-lesson-id="toys" aria-label="Open the Toys R Us to open 120 new stores in USA lesson details">
+            <time class="card-date" datetime="2026-10-03">October 3</time><span class="thumb-word">Toys<br>R Us</span><span class="thumb-icon" aria-hidden="true"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18"></path><path d="m14 5 7 7-7 7"></path></svg></span>
+          </a>
+          <div class="card-body"><h2>Toys R Us to open 120 new stores in USA</h2><p>Toys, new stores, and the return of Toys R Us in the USA.</p></div>
+          <footer class="card-footer"><div class="footer-actions"><a class="lesson-link" href="https://breakingnewsenglish.com/2609/260924-toys-r-us.html" target="_blank" rel="noopener noreferrer">Open article</a><a class="kahoot-link" href="https://create.kahoot.it/details/d0bc1572-9795-41ed-84aa-a298077d1b4e" target="_blank" rel="noopener noreferrer">Study with Kahoot</a></div><svg class="external" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 3h7v7"></path><path d="M10 14 21 3"></path><path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6"></path></svg></footer>
+        </article>
+
         <article class="card">
           <a class="thumb cover cover-manga" href="https://breakingnewsenglish.com/2609/260903-manga-theme-park.html" target="_blank" rel="noopener noreferrer" data-lesson-id="manga" aria-label="Open the France and Saudi Arabia agree to manga theme park lesson details">
             <time class="card-date" datetime="2026-09-26">September 26</time><span class="thumb-word">Manga<br>Theme Park</span><span class="thumb-icon" aria-hidden="true"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18"></path><path d="m14 5 7 7-7 7"></path></svg></span>
@@ -271,6 +281,15 @@
 
   <script>
     const lessons = {
+      toys: {
+        date: "October 3, 2026",
+        title: "Toys R Us to open 120 new stores in USA",
+        summary: "A news lesson about new toy stores, the comeback of Toys R Us, and why adults and children buy toys.",
+        source: "https://breakingnewsenglish.com/2609/260924-toys-r-us.html",
+        kahoot: "https://create.kahoot.it/details/d0bc1572-9795-41ed-84aa-a298077d1b4e",
+        slides: Array.from({ length: 9 }, (_, index) => `assets/esl2/toys-slide-${String(index + 1).padStart(2, "0")}.jpg`),
+        sentences: []
+      },
       manga: {
         date: "September 26, 2026",
         title: "France and Saudi Arabia agree to manga theme park",
@@ -278,7 +297,18 @@
         source: "https://breakingnewsenglish.com/2609/260903-manga-theme-park.html",
         kahoot: "https://create.kahoot.it/share/france-and-saudi-arabia-agree-to-manga-theme-park/64c01b48-33bf-4957-b8dc-d7240484b11f",
         slides: Array.from({ length: 10 }, (_, index) => `assets/esl2/manga-slide-${String(index + 1).padStart(2, "0")}.jpg`),
-        sentences: []
+        sentences: [
+          "I enjoy watching my favorite TV show.",
+          "He is big fan of this movie.",
+          "Global connection is smaller than before because we didn’t know other countries’ events, but now we know what’s happening around the world.",
+          "I am building my skill for my own business.",
+          "I discovered my plant had grown a pretty flower.",
+          "I am investing into the Disney company, so I am hoping to get some benefit from that investment.",
+          "My husband (at the moment) is very reliant on me because he is very sick.",
+          "Can you make a 1/10th scale of this floor plan?",
+          "I expect my own business can provide benefits this year."
+        ],
+        vocabulary: ["enjoy", "fan", "global", "building", "discovered", "investing", "benefit", "investment", "reliant", "scale", "expect", "benefits"]
       },
       influencers: {
         date: "September 19, 2026",
@@ -392,6 +422,24 @@
       });
     }
 
+    function appendHighlightedSentence(item, sentence, vocabulary) {
+      if (!vocabulary.length) {
+        item.textContent = sentence;
+        return;
+      }
+      const words = [...vocabulary].sort((a, b) => b.length - a.length);
+      const pattern = new RegExp("\\b(?:" + words.join("|") + ")\\b", "gi");
+      let position = 0;
+      for (const match of sentence.matchAll(pattern)) {
+        item.append(document.createTextNode(sentence.slice(position, match.index)));
+        const highlight = document.createElement("mark");
+        highlight.textContent = match[0];
+        item.append(highlight);
+        position = match.index + match[0].length;
+      }
+      item.append(document.createTextNode(sentence.slice(position)));
+    }
+
     function openLesson(id) {
       activeLesson = lessons[id];
       activeSlide = 0;
@@ -405,11 +453,13 @@
       sentencesNote.hidden = activeLesson.sentences.length > 0;
       activeLesson.sentences.forEach(sentence => {
         const item = document.createElement("li");
-        item.textContent = sentence;
+        appendHighlightedSentence(item, sentence, activeLesson.vocabulary || []);
         sentenceList.append(item);
       });
       renderCarousel();
       modal.showModal();
+      modal.querySelector(".modal-shell").scrollTop = 0;
+      modal.querySelector(".modal-details").scrollTop = 0;
     }
 
     document.querySelectorAll(".thumb[data-lesson-id]").forEach(card => {
