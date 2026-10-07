@@ -85,11 +85,13 @@
     .protein { background: linear-gradient(135deg, #225638, #519347 54%, #b6cc63); }
     .earth { background: linear-gradient(135deg, #124653, #1d847c 54%, #7cc990); }
     .ferrari { background: linear-gradient(135deg, #360e21, #a41435 53%, #ef6a3d); }
+    .birdsong { background: linear-gradient(135deg, #123e38, #397b52 54%, #8ca854); }
     .thumb.cover { background-position: center; background-repeat: no-repeat; background-size: cover; }
     .thumb.cover::before { inset: 0; width: auto; height: auto; border: 0; border-radius: 0; background: linear-gradient(180deg, rgba(8,12,24,.08), rgba(8,12,24,.4)); }
     .thumb.cover::after { display: none; }
     .thumb.cover .thumb-word, .thumb.cover .thumb-icon { display: none; }
     .cover-toys { background-image: url("assets/esl2/toys-slide-01.jpg"); }
+    .cover-birdsong { background-image: url("assets/esl2/birdsong-slide-01.jpg"); }
     .cover-manga { background-image: url("assets/esl2/manga-slide-01.jpg"); }
     .cover-influencers { background-image: url("assets/esl2/influencers-slide-01.jpg"); }
     .cover-bali { background-image: url("assets/esl2/bali-slide-01.jpg"); }
@@ -183,6 +185,13 @@
 
     <section class="grid-wrap" aria-label="ESL 2 class lessons">
       <div class="grid">
+      <article class="card">
+        <a class="thumb birdsong cover cover-birdsong" href="https://breakingnewsenglish.com/2609/260910-birdsong-and-traffic-noise.html" target="_blank" rel="noopener noreferrer" data-lesson-id="birdsong" aria-label="Open the Birdsong and Traffic lesson details">
+          <time class="card-date" datetime="2026-10-10">October 10</time><span class="thumb-word">Birdsong<br>and Traffic</span>
+        </a>
+        <div class="card-body"><h2>Traffic noise may be making birdsong less calming</h2><p>Birdsong, traffic noise, and how sounds affect the way we feel.</p></div>
+        <footer class="card-footer"><div class="footer-actions"><a class="lesson-link" href="https://breakingnewsenglish.com/2609/260910-birdsong-and-traffic-noise.html" target="_blank" rel="noopener noreferrer">Open article</a><a class="kahoot-link" href="https://create.kahoot.it/details/c4ceafa4-d3a8-44d5-a2d8-b25622f53153" target="_blank" rel="noopener noreferrer">Study with Kahoot</a></div></footer>
+      </article>
         <article class="card">
           <a class="thumb cover cover-toys" href="https://breakingnewsenglish.com/2609/260924-toys-r-us.html" target="_blank" rel="noopener noreferrer" data-lesson-id="toys" aria-label="Open the Toys R Us to open 120 new stores in USA lesson details">
             <time class="card-date" datetime="2026-10-03">October 3</time><span class="thumb-word">Toys<br>R Us</span><span class="thumb-icon" aria-hidden="true"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18"></path><path d="m14 5 7 7-7 7"></path></svg></span>
@@ -281,6 +290,16 @@
 
   <script>
     const lessons = {
+      birdsong: {
+        date: "October 10, 2026",
+        title: "Traffic noise may be making birdsong less calming",
+        summary: "A news lesson about birdsong, traffic noise, and finding quiet outdoor spaces.",
+        source: "https://breakingnewsenglish.com/2609/260910-birdsong-and-traffic-noise.html",
+        kahoot: "https://create.kahoot.it/details/c4ceafa4-d3a8-44d5-a2d8-b25622f53153",
+        slides: Array.from({ length: 9 }, (_, index) => `assets/esl2/birdsong-slide-${String(index + 1).padStart(2, "0")}.jpg`),
+        showSentences: false,
+        sentences: []
+      },
       toys: {
         date: "October 3, 2026",
         title: "Toys R Us to open 120 new stores in USA",
