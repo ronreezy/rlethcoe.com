@@ -92,6 +92,7 @@
     .thumb.cover .thumb-word, .thumb.cover .thumb-icon { display: none; }
     .cover-toys { background-image: url("assets/esl2/toys-slide-01.jpg"); }
     .cover-birdsong { background-image: url("assets/esl2/birdsong-slide-01.jpg"); }
+    .cover-energy { background-image: url("assets/esl2/energy-slide-01.jpg"); }
     .cover-manga { background-image: url("assets/esl2/manga-slide-01.jpg"); }
     .cover-influencers { background-image: url("assets/esl2/influencers-slide-01.jpg"); }
     .cover-bali { background-image: url("assets/esl2/bali-slide-01.jpg"); }
@@ -185,6 +186,13 @@
 
     <section class="grid-wrap" aria-label="ESL 2 class lessons">
       <div class="grid">
+      <article class="card">
+        <a class="thumb cover cover-energy" href="https://breakingnewsenglish.com/2610/261001-energy-price-crisis.html" target="_blank" rel="noopener noreferrer" data-lesson-id="energy" aria-label="Open the European Union energy price crisis lesson details">
+          <time class="card-date" datetime="2026-10-17">October 17</time><span class="thumb-word">Energy<br>Price Crisis</span>
+        </a>
+        <div class="card-body"><h2>European Union warns of energy price crisis</h2><p>Energy supplies, rising prices, and how fuel costs affect everyday life.</p></div>
+        <footer class="card-footer"><div class="footer-actions"><a class="lesson-link" href="https://breakingnewsenglish.com/2610/261001-energy-price-crisis.html" target="_blank" rel="noopener noreferrer">Open article</a><a class="kahoot-link" href="https://create.kahoot.it/share/european-union-warns-of-energy-price-crisis/b97b5846-e819-4ea1-a66b-a502c87083d9" target="_blank" rel="noopener noreferrer">Study with Kahoot</a></div></footer>
+      </article>
       <article class="card">
         <a class="thumb birdsong cover cover-birdsong" href="https://breakingnewsenglish.com/2609/260910-birdsong-and-traffic-noise.html" target="_blank" rel="noopener noreferrer" data-lesson-id="birdsong" aria-label="Open the Birdsong and Traffic lesson details">
           <time class="card-date" datetime="2026-10-10">October 10</time><span class="thumb-word">Birdsong<br>and Traffic</span>
@@ -290,6 +298,16 @@
 
   <script>
     const lessons = {
+      energy: {
+        date: "October 17, 2026",
+        title: "European Union warns of energy price crisis",
+        summary: "A news lesson about energy supplies, rising prices, diesel, and Europe's plans for clean energy.",
+        source: "https://breakingnewsenglish.com/2610/261001-energy-price-crisis.html",
+        kahoot: "https://create.kahoot.it/share/european-union-warns-of-energy-price-crisis/b97b5846-e819-4ea1-a66b-a502c87083d9",
+        slides: Array.from({ length: 8 }, (_, index) => `assets/esl2/energy-slide-${String(index + 1).padStart(2, "0")}.jpg`),
+        showSentences: false,
+        sentences: []
+      },
       birdsong: {
         date: "October 10, 2026",
         title: "Traffic noise may be making birdsong less calming",
